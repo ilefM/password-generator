@@ -1,12 +1,13 @@
 import React from "react";
-import "./App.css";
+import {GlobalStyle} from "./globalStyle";
 import Generator from "./components/Generator";
 
 function App() {
     return (
-        <div className="App">
+        <>
+            <GlobalStyle />
             <Generator />
-        </div>
+        </>
     );
 }
 
