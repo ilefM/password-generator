@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Card = styled.div`
+    position: relative;
+    align-content: center;
+    border: 3px solid;
+    background-color: #d8dee9;
+`;
+
 export const Button = styled.button`
     background: #8fbcbb;
     font-size: 1.5em;

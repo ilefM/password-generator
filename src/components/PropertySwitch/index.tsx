@@ -17,7 +17,11 @@ const PropertySwitch: FC<IProperties> = ({text, property}) => {
     return (
         <Container>
             <Text>{text}</Text>
-            <Switch defaultChecked={checked} onChange={handleClick} />
+            <Switch
+                defaultChecked={checked}
+                onChange={handleClick}
+                color="primary"
+            />
             <Text>{checked ? "true" : "false"}</Text>
         </Container>
     );

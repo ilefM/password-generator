@@ -1,11 +1,11 @@
 import React from "react";
 import * as Constants from "../../constants";
 import PropertySwitch from "../PropertySwitch";
-import {Text} from "./styles";
+import {Card, Text} from "./styles";
 
 const Generator = () => {
     return (
-        <div>
+        <Card>
             <Text>At least, we know</Text>
             <PropertySwitch
                 text={Constants.propertyDigitalText}
@@ -19,7 +19,7 @@ const Generator = () => {
                 text={Constants.propertyUpperCaseText}
                 property={false}
             />
-        </div>
+        </Card>
     );
 };
 
