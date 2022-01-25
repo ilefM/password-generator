@@ -1,22 +1,24 @@
-import React, {useState} from "react";
-import {Button} from "./styles";
+import React from "react";
+import * as Constants from "../../constants";
+import PropertySwitch from "../PropertySwitch";
+import {Text} from "./styles";
 
 const Generator = () => {
-    const [password, setPassword] = useState("");
-    const [characters, setCharacters] = useState(true);
-    const [lenght, setLenght] = useState(8);
-    const [symbols, setSymbols] = useState(true);
-    const [numbers, setNumbers] = useState(true);
-    const [upperCase, setUpperCase] = useState(true);
-
-    const generate = (): void => {
-        console.log("miam");
-    };
-
     return (
         <div>
-            <h4>{password}</h4>
-            <Button onClick={() => generate()}>Generate !</Button>
+            <Text>At least, we know</Text>
+            <PropertySwitch
+                text={Constants.propertyDigitalText}
+                property={false}
+            />
+            <PropertySwitch
+                text={Constants.propertySymbolsText}
+                property={false}
+            />
+            <PropertySwitch
+                text={Constants.propertyUpperCaseText}
+                property={false}
+            />
         </div>
     );
 };

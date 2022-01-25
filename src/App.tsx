@@ -1,5 +1,5 @@
 import React from "react";
-import {GlobalStyle} from "./globalStyle";
+import {GlobalStyle} from "./GlobalStyle";
 import Generator from "./components/Generator";
 
 function App() {

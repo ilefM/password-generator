@@ -5,6 +5,11 @@ export const Button = styled.button`
     font-size: 1.5em;
     margin: 2em;
     padding: 0.25em 1em;
-    border: 4px solid #2e3440;
-    border-radius: 10px;
+    border: 2px solid #2e3440;
+    border-radius: 4px;
+`;
+
+export const Text = styled.p`
+    font-family: Inter;
+    font-size: 20pt;
 `;
