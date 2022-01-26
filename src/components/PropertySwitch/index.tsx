@@ -6,7 +6,7 @@ import React, {
     SetStateAction,
     useState,
 } from "react";
-import {IPasswordProperty} from "../Generator/PasswordProperty";
+import {IPasswordProperty} from "../../containers/Generator/PasswordProperty";
 import {Container, Text} from "./styles";
 
 export enum PropertyType {

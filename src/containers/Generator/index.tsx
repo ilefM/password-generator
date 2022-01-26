@@ -1,7 +1,9 @@
 import {useState} from "react";
 import * as Constants from "../../constants";
-import CharacterNbSlider from "../CharacterNbSlider";
-import PropertySwitch, {PropertyType} from "../PropertySwitch";
+import CharacterNbSlider from "../../components/CharacterNbSlider";
+import PropertySwitch, {
+    PropertyType,
+} from "../../components/PropertySwitch";
 import {IPasswordProperty} from "./PasswordProperty";
 import {Card, StyledButton, Text} from "./styles";
 

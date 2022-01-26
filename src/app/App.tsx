@@ -1,7 +1,7 @@
 import React from "react";
-import Generator from "./components/Generator";
+import Generator from "../containers/Generator";
 import {ThemeProvider} from "@mui/material/styles";
-import theme from "./themes";
+import theme from "../themes";
 import {CssBaseline} from "@mui/material";
 
 function App() {
