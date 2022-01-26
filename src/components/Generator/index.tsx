@@ -1,23 +1,12 @@
-import {constants} from "buffer";
 import {useState} from "react";
 import * as Constants from "../../constants";
 import CharacterNbSlider from "../CharacterNbSlider";
-import PropertySwitch from "../PropertySwitch";
+import PropertySwitch, {PropertyType} from "../PropertySwitch";
+import {IPasswordProperty} from "./PasswordProperty";
 import {Card, StyledButton, Text} from "./styles";
 
-interface IState {
-    properties: {
-        characterNb: number;
-        upperCases: boolean;
-        symbols: boolean;
-        digitals: boolean;
-    };
-}
-
 const Generator = () => {
-    const [properties, setProperties] = useState<
-        IState["properties"]
-    >({
+    const [properties, setProperties] = useState<IPasswordProperty>({
         characterNb: Constants.INITIAL_NUMBER_CHARACTERS,
         upperCases: true,
         symbols: true,
@@ -33,14 +22,20 @@ const Generator = () => {
             <PropertySwitch
                 text={Constants.PROPERTY_DIGITAL_TEXT}
                 property={properties.digitals}
+                setProperties={setProperties}
+                typeOfProperty={PropertyType.DIGITALS}
             />
             <PropertySwitch
                 text={Constants.PROPERTY_SYMBOLS_TEXT}
                 property={properties.symbols}
+                setProperties={setProperties}
+                typeOfProperty={PropertyType.SYMBOLS}
             />
             <PropertySwitch
                 text={Constants.PROPERTY_UPPER_CASES_TEXT}
                 property={properties.upperCases}
+                setProperties={setProperties}
+                typeOfProperty={PropertyType.UPPER_CASES}
             />
 
             <CharacterNbSlider property={properties.characterNb} />
