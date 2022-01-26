@@ -2,11 +2,11 @@ import React from "react";
 import {GlobalStyle} from "./GlobalStyle";
 import Generator from "./components/Generator";
 import {ThemeProvider} from "@mui/material/styles";
-import {NordTheme} from "./themes/NordTheme";
+import theme from "./themes";
 
 function App() {
     return (
-        <ThemeProvider theme={NordTheme}>
+        <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Generator />
         </ThemeProvider>

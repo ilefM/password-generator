@@ -1,22 +1,30 @@
+import {Button} from "@mui/material";
 import styled from "styled-components";
+import {styled as styledMUI} from "@mui/material/styles";
 
 export const Card = styled.div`
     position: relative;
     align-content: center;
-    border: 3px solid;
-    background-color: #d8dee9;
-`;
-
-export const Button = styled.button`
-    background: #8fbcbb;
-    font-size: 1.5em;
-    margin: 2em;
-    padding: 0.25em 1em;
-    border: 2px solid #2e3440;
-    border-radius: 4px;
+    background-color: ${(props) => props.theme.bg};
 `;
 
 export const Text = styled.p`
     font-family: Inter;
     font-size: 20pt;
+`;
+
+export const TextButton = styled.p`
+    font-family: Inter;
+`;
+
+export const StyledButton = styledMUI(Button)`
+    background-color: ${(props) => props.theme.palette.primary.dark};
+    font-family: Inter;
+    color:${(props) => props.theme.bg.light}; 
+    border-radius: 4px;
+    :hover{
+        background-color: ${(props) =>
+            props.theme.palette.primary.main};
+    }
+
 `;
