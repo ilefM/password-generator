@@ -2,12 +2,12 @@ import {Switch} from "@mui/material";
 import React, {ChangeEvent, FC, useState} from "react";
 import {Container, Text} from "./styles";
 
-interface IProperties {
+interface IProperty {
     text: string;
     property: boolean;
 }
 
-const PropertySwitch: FC<IProperties> = ({text, property}) => {
+const PropertySwitch: FC<IProperty> = ({text, property}) => {
     const [checked, setChecked] = useState(false);
 
     const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,6 @@ const PropertySwitch: FC<IProperties> = ({text, property}) => {
                 onChange={handleClick}
                 color="secondary"
             />
-            <Text>{checked ? "true" : "false"}</Text>
         </Container>
     );
 };
