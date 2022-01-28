@@ -1,19 +1,25 @@
 import {useState} from "react";
 import * as Constants from "../../constants";
-import CharacterNbSlider from "../../components/CharacterNbSlider";
-import PropertySwitch, {
-    PropertyType,
-} from "../../components/PropertySwitch";
-import {IPasswordProperty} from "./PasswordProperty";
+import PropertySwitch from "../../components/PasswordProperties";
 import {Card, StyledButton, Text} from "./styles";
+import CharacterNbSlider from "../../components/CharacterNbSlider";
+
+export interface IPasswordProperties {
+    characterNb: number;
+    upperCases: boolean;
+    symbols: boolean;
+    digitals: boolean;
+}
 
 const Generator = () => {
-    const [properties, setProperties] = useState<IPasswordProperty>({
-        characterNb: Constants.INITIAL_NUMBER_CHARACTERS,
-        upperCases: true,
-        symbols: true,
-        digitals: true,
-    });
+    const [properties, setProperties] = useState<IPasswordProperties>(
+        {
+            characterNb: Constants.INITIAL_NUMBER_CHARACTERS,
+            upperCases: true,
+            symbols: true,
+            digitals: true,
+        }
+    );
 
     return (
         <Card>
@@ -22,28 +28,13 @@ const Generator = () => {
             <Text>sdsdsdsds</Text>
 
             <PropertySwitch
-                text={Constants.PROPERTY_DIGITAL_TEXT}
-                property={properties.digitals}
+                properties={properties}
                 setProperties={setProperties}
-                typeOfProperty={PropertyType.DIGITALS}
-            />
-            <PropertySwitch
-                text={Constants.PROPERTY_SYMBOLS_TEXT}
-                property={properties.symbols}
-                setProperties={setProperties}
-                typeOfProperty={PropertyType.SYMBOLS}
-            />
-            <PropertySwitch
-                text={Constants.PROPERTY_UPPER_CASES_TEXT}
-                property={properties.upperCases}
-                setProperties={setProperties}
-                typeOfProperty={PropertyType.UPPER_CASES}
             />
 
-            <CharacterNbSlider property={properties.characterNb} />
-            <StyledButton variant="contained">
-                {Constants.BUTTON_GENERATE_TEXT}
-            </StyledButton>
+            {properties.digitals ? "true" : "false"}
+            {properties.symbols ? "true" : "false"}
+            {properties.upperCases ? "true" : "false"}
         </Card>
     );
 };
