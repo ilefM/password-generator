@@ -10,4 +10,3 @@ A web app that generate random passwords with customs rules.
 -   Typescript
 -   Hooks
 -   Styled Components
--   Material UI
