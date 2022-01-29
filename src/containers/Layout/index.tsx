@@ -1,7 +1,14 @@
 import React from "react";
+import {Card, Container, Title} from "./styles";
 
 const Layout = () => {
-    return <div></div>;
+    return (
+        <Container>
+            <Card>
+                <Title>Password Generator</Title>
+            </Card>
+        </Container>
+    );
 };
 
 export default Layout;

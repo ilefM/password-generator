@@ -1,16 +1,16 @@
 import React from "react";
-import Generator from "../containers/Generator";
-import {ThemeProvider} from "@mui/material/styles";
-import theme from "../themes";
-import {CssBaseline} from "@mui/material";
+import {ThemeProvider} from "styled-components";
+import Layout from "./containers/Layout";
+import GlobalStyles from "./GlobalStyle";
+import {NordTheme} from "./theme";
 
-function App() {
+const App = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Generator />
+        <ThemeProvider theme={NordTheme}>
+            <GlobalStyles />
+            <Layout />
         </ThemeProvider>
     );
-}
+};
 
 export default App;
