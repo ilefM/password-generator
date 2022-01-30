@@ -28,7 +28,7 @@ npm start
 -   User can choose whether if the password contains uppercases, lowercases, digitals and symbols and generate it with those rules.
 -   That's it.
 
-### File Structure :
+### File structure :
 
 I used the best practice like if I was building a big project. This is why this structure is complicated for a small app
 
@@ -50,6 +50,6 @@ I used the best practice like if I was building a big project. This is why this 
             ├── font.ttf
     ...
 
-### For Learning Purposes :
+### For learning purposes :
 
 This project could be done entirely in the App component but instead I devided the project in small components to learn the useState hook, props and styled components library.
