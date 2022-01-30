@@ -1,6 +1,6 @@
 ### STILL IN PROGRESS
 
-# Password Generator
+<h1 align="center"> Password Generator </h1>
 
 A web app that generate random passwords with customs rules.
 
@@ -11,33 +11,44 @@ A web app that generate random passwords with customs rules.
 -   Hooks
 -   Styled Components
 
+## Quick start
+
+```bash
+# if using yarn
+yarn install
+yarn start
+
+# if using npm : you should delete yarn.lock file first and run the following commands
+npm install
+npm start
+```
+
 ### Features :
 
--   User can choose whether if the password contains uppercases, lowercases, digitals and symbols and just generate it.
+-   User can choose whether if the password contains uppercases, lowercases, digitals and symbols and generate it with those rules.
 -   That's it.
 
 ### File Structure :
 
 I used the best practice like if I was building a big project. This is why this structure is complicated for a small app
 
-        containers/
-            Layout/
-                index.tsx
-                style.ts
-        components/
-            CheckboxProperties/
-                index.tsx
-                style.ts
+    .
+    ├── src/
+        ├── containers/
+            ├── Layout
+                ├── index.tsx
+                ├── style.ts
+        ├── components/
+            ├── CheckboxProperties/
+                ├── index.tsx
+                ├── style.ts
             ...
-        constants/
-            index.ts
-        interfaces/
-            index.ts
-            ...
-        themes/
-            index.ts
-        assets/
-            font.tff
+        ├── constants/
+        ├── interfaces/
+        ├── themes/
+        ├── assets/
+            ├── font.ttf
+    ...
 
 ### For Learning Purposes :
 
