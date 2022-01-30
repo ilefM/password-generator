@@ -16,7 +16,7 @@ A web app that generate random passwords with customs rules.
 -   User can choose whether if the password contains uppercases, lowercases, digitals and symbols and just generate it.
 -   That's it.
 
-### File Structure :
+### File structure :
 
 I used the best practice like if I was building a big project. This is why this structure is complicated for a small app
 
@@ -39,6 +39,6 @@ I used the best practice like if I was building a big project. This is why this 
         assets/
             font.tff
 
-### For Learning Purposes :
+### For learning purposes :
 
 This project could be done entirely in the App component but instead I devided the project in small components to learn the useState hook, props and styled components library.
