@@ -21,9 +21,7 @@ const GenerateButton: FC<IProps> = ({properties, setPassword}) => {
 
     return (
         <div>
-            <button onClick={handleClick}>
-                Generate this fucking password
-            </button>
+            <button onClick={handleClick}>Generate password</button>
         </div>
     );
 };
