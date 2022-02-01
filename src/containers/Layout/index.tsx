@@ -6,6 +6,8 @@ import {
     IPasswordProperties,
 } from "../../interfaces";
 import CheckboxProperties from "../../components/CheckboxProperties";
+import SliderProperty from "../../components/SliderProperty";
+import GenerateButton from "../../components/GenerateButton";
 
 const Layout = () => {
     const [properties, setProperties] = useState<IPasswordProperties>(
@@ -16,6 +18,9 @@ const Layout = () => {
             symbols: true,
             nbCharacter: Constants.INITIAL_NUMBER_CHARACTERS,
         }
+    );
+    const [password, setPassword] = useState<string>(
+        "default password"
     );
 
     const checkboxesProperties: ICheckboxProperties[] = [
@@ -29,6 +34,7 @@ const Layout = () => {
         <Container>
             <Card>
                 <Title>Password Generator</Title>
+                <Title>{password}</Title>
                 {checkboxesProperties.map((property, key) => {
                     return (
                         <CheckboxProperties
@@ -40,6 +46,17 @@ const Layout = () => {
                         />
                     );
                 })}
+                <SliderProperty
+                    text="Character number"
+                    propertyType="nbCharacter"
+                    properties={properties}
+                    setProperties={setProperties}
+                />
+                {properties.nbCharacter}
+                <GenerateButton
+                    properties={properties}
+                    setPassword={setPassword}
+                />
             </Card>
         </Container>
     );

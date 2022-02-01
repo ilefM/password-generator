@@ -24,7 +24,8 @@ export const generatePassword = (
         ...(withSymbols ? symbols : []),
     ];
 
-    if (available.length === 0) return;
+    if (nbCharacters <= 3) return "";
+    if (available.length === 0) return "";
 
     let password: string = "";
 

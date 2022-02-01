@@ -8,7 +8,7 @@ export const Card = styled.div`
     //margin: 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     //border-radius: 15px;
-    display: flex;
+    //display: flex;
     align-items: center;
     /* alwyas in main axes */
     //justify-content: space-between;

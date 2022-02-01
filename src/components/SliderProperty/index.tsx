@@ -16,6 +16,7 @@ const SliderProperty: FC<IPropertiesProps> = ({
     };
     return (
         <div>
+            <h1>{text}</h1>
             <input
                 type="range"
                 name="nbCharacters"

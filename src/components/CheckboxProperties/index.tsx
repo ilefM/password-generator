@@ -13,6 +13,26 @@ const CheckboxProperties: FC<IPropertiesProps> = ({
             [e.target.name]: e.target.checked,
         });
     };
+
+    const getChecked = (): boolean => {
+        let checked = false;
+        switch (propertyType) {
+            case "upperCase":
+                checked = properties.upperCase;
+                break;
+            case "lowerCase":
+                checked = properties.lowerCase;
+                break;
+            case "symbols":
+                checked = properties.symbols;
+                break;
+            case "digitals":
+                checked = properties.digitals;
+                break;
+        }
+        return checked;
+    };
+
     return (
         <div>
             <h5>{text}</h5>
@@ -20,6 +40,7 @@ const CheckboxProperties: FC<IPropertiesProps> = ({
                 type="checkbox"
                 name={propertyType}
                 onChange={handleChange}
+                checked={getChecked()}
             />
         </div>
     );
