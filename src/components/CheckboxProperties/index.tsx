@@ -1,5 +1,6 @@
 import React, {ChangeEvent, FC} from "react";
 import {IPropertiesProps} from "../../interfaces";
+import {Container} from "./styles";
 
 const CheckboxProperties: FC<IPropertiesProps> = ({
     text,
@@ -14,7 +15,7 @@ const CheckboxProperties: FC<IPropertiesProps> = ({
         });
     };
 
-    const getChecked = (): boolean => {
+    const isChecked = () => {
         let checked = false;
         switch (propertyType) {
             case "upperCase":
@@ -34,15 +35,15 @@ const CheckboxProperties: FC<IPropertiesProps> = ({
     };
 
     return (
-        <div>
+        <Container>
             <h5>{text}</h5>
             <input
                 type="checkbox"
                 name={propertyType}
                 onChange={handleChange}
-                checked={getChecked()}
+                checked={isChecked()}
             />
-        </div>
+        </Container>
     );
 };
 

@@ -46,6 +46,7 @@ const Layout = () => {
                         />
                     );
                 })}
+
                 <SliderProperty
                     text="Character number"
                     propertyType="nbCharacter"
