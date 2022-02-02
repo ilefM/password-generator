@@ -1,3 +1,22 @@
+/* This function get a random empty entry and return its index */
+const findRandomEmptyEntry = (arr: string[]) => {
+    const emptyEntries = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (!arr[i]) {
+            emptyEntries.push(i);
+        }
+    }
+    return emptyEntries[Math.floor(Math.random() * emptyEntries.length)];
+};
+
+/* This function add a character to the password array in a random free entry */
+const AddToPassword = (characters: string[], passwordArray: string[]) => {
+    const character = characters[Math.floor(Math.random() * characters.length)];
+    const emptyEntryIndex = findRandomEmptyEntry(passwordArray);
+    passwordArray[emptyEntryIndex] = character;
+    return passwordArray;
+};
+
 export const generatePassword = (
     withLowerCases: boolean,
     withUpperCases: boolean,
@@ -5,18 +24,23 @@ export const generatePassword = (
     withDigitals: boolean,
     nbCharacters: number
 ) => {
+    /* Generate all available uppercase letters */
     const upperCasesLetters = [...Array(26)].map((val, i) =>
         String.fromCharCode(i + 65)
     );
 
+    /* Generate all available lowercase letters */
     const lowerCasesLetters = [...Array(26)].map((val, i) =>
         String.fromCharCode(i + 97)
     );
 
+    /* Generate all available digitals */
     const digitals = [...Array(10)].map((val, i) => i.toString());
 
+    /* Generate all available symbols  */
     const symbols = ["!", "@", "#", "$", "%", "^", "&", "/"];
 
+    /* Merge all available characters (uppercase, lowercase, digitals, symbols) */
     let available = [
         ...(withUpperCases ? upperCasesLetters : []),
         ...(withDigitals ? digitals : []),
@@ -28,63 +52,35 @@ export const generatePassword = (
     if (available.length === 0) return "";
 
     let passwordArray: string[] = Array(nbCharacters);
-
     let password: string = "";
 
-    let atLeastOneSymbol = false;
-    let atLeastOneDigitals = false;
-    let atLeastOneUpCase = false;
-    let atLeastOneLowCase = false;
-
-    for (let i = 0; i < nbCharacters; i++) {
-        // if (withUpperCases && !atLeastOneUpCase) {
-        //     const randomUpperCase =
-        //         getRandomCharacter(upperCasesLetters);
-        //     atLeastOneUpCase = true;
-        //     const emptyEntry = findEmptyEntry(passwordArray);
-        //     if (emptyEntry === -1) return "";
-        //     passwordArray[emptyEntry] = randomUpperCase;
-        // }
-        // if (withLowerCases && !atLeastOneLowCase) {
-        //     const randomIndex = Math.floor(
-        //         Math.random() * lowerCasesLetters.length
-        //     );
-        //     const randomLowCase = lowerCasesLetters[randomIndex];
-        // }
-        // if (withSymbols && !atLeastOneSymbol) {
-        //     const randomIndex = Math.floor(
-        //         Math.random() * symbols.length
-        //     );
-        //     const randomSymbol = symbols[randomIndex];
-        // }
-        // if (withDigitals && !atLeastOneDigitals) {
-        //     const randomIndex = Math.floor(
-        //         Math.random() * digitals.length
-        //     );
-        //     const randomDigit = digitals[randomIndex];
-        // }
-        const randomIndex = Math.floor(
-            Math.random() * available.length
-        );
-        password += available[randomIndex];
+    // To guarantee there will be at least one character from each type chosen
+    if (withUpperCases) {
+        passwordArray = AddToPassword(upperCasesLetters, passwordArray);
+        nbCharacters--;
     }
+    if (withLowerCases) {
+        passwordArray = AddToPassword(lowerCasesLetters, passwordArray);
+        nbCharacters--;
+    }
+    if (withSymbols) {
+        passwordArray = AddToPassword(symbols, passwordArray);
+        nbCharacters--;
+    }
+    if (withDigitals) {
+        passwordArray = AddToPassword(digitals, passwordArray);
+        nbCharacters--;
+    }
+
+    /* Fill the rest with random characters from available ones */
+    for (let i = 0; i < nbCharacters; i++) {
+        passwordArray = AddToPassword(available, passwordArray);
+    }
+
+    /* Tranform the array into string */
+    passwordArray.forEach((character) => {
+        password += character;
+    });
 
     return password;
-};
-
-const fillWithPriorities = (
-    characters: string[],
-    password: string[]
-) => {
-    const character = arr[Math.floor(Math.random() * arr.length)];
-    const emptyEntry = findEmptyEntry(arr);
-    if (emptyEntry == -1) return [];
-};
-
-const findEmptyEntry = (arr: string[]) => {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]) continue;
-        else return i;
-    }
-    return -1;
 };
