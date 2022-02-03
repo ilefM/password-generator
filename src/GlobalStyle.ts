@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import Background from "./assets/images/background.svg";
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -6,9 +7,14 @@ const GlobalStyles = createGlobalStyle`
     }
     
     body {
-        background-color: ${(props) => props.theme.background};
-        font-family: ${(props) => props.theme.text.fontFamily};
-        margin: 0;
+        height: 100vh;
+        text-align: center;
+        //background-color: ${(props) => props.theme.palette.background};
+        background-image: url(${Background});
+        position: fixed;
+        min-height: 100%;
+        min-width: 100%;
+        background-size: cover;
     }
 `;
 

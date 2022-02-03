@@ -1,6 +1,7 @@
 import React, {Dispatch, FC} from "react";
 import {IPasswordProperties} from "../../interfaces";
-import {generatePassword} from "../../passwordGenerator";
+import {generatePassword} from "./passwordGenerator";
+import {Container, Button} from "./styles";
 
 interface IProps {
     properties: IPasswordProperties;
@@ -20,9 +21,9 @@ const GenerateButton: FC<IProps> = ({properties, setPassword}) => {
     };
 
     return (
-        <div>
-            <button onClick={handleClick}>Generate password</button>
-        </div>
+        <Container>
+            <Button onClick={handleClick}>Generate password</Button>
+        </Container>
     );
 };
 

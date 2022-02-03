@@ -1,6 +1,7 @@
 import React, {ChangeEvent, FC} from "react";
 import * as Constants from "../../constants";
 import {IPropertiesProps} from "../../interfaces";
+import {Container, Slider, TextContainer} from "./styles";
 
 const SliderProperty: FC<IPropertiesProps> = ({
     text,
@@ -15,9 +16,13 @@ const SliderProperty: FC<IPropertiesProps> = ({
         });
     };
     return (
-        <div>
-            <p>{text}</p>
-            <input
+        <Container>
+            <TextContainer>
+                <p>{text}</p>
+                <p>{properties.nbCharacter}</p>
+            </TextContainer>
+
+            <Slider
                 type="range"
                 name="nbCharacters"
                 min={Constants.MIN_NUMBER_CHARACTERS}
@@ -25,7 +30,7 @@ const SliderProperty: FC<IPropertiesProps> = ({
                 onChange={handleChange}
                 value={properties.nbCharacter}
             />
-        </div>
+        </Container>
     );
 };
 

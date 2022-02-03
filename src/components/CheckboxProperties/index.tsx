@@ -1,6 +1,6 @@
 import React, {ChangeEvent, FC} from "react";
 import {IPropertiesProps} from "../../interfaces";
-import {Container} from "./styles";
+import {Checkbox, CheckboxContainer, Container, Text} from "./styles";
 
 const CheckboxProperties: FC<IPropertiesProps> = ({
     text,
@@ -36,13 +36,15 @@ const CheckboxProperties: FC<IPropertiesProps> = ({
 
     return (
         <Container>
-            <h5>{text}</h5>
-            <input
-                type="checkbox"
-                name={propertyType}
-                onChange={handleChange}
-                checked={isChecked()}
-            />
+            <Text>{text}</Text>
+            <CheckboxContainer>
+                <Checkbox
+                    type="checkbox"
+                    name={propertyType}
+                    onChange={handleChange}
+                    checked={isChecked()}
+                />
+            </CheckboxContainer>
         </Container>
     );
 };

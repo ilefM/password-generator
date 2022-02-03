@@ -1,22 +1,24 @@
 import "styled-components";
 declare module "styled-components" {
     export interface DefaultTheme {
-        background: string;
-        lightBackground: string;
         text: {
-            fontColor: string;
-            fontFamily: string;
-            fontSize: string;
+            primary: {
+                fontColor: string;
+                fontFamily: string;
+                fontSize: string;
+            };
+            secondary: {
+                fontColor: string;
+                fontFamily: string;
+                fontSize: string;
+            };
         };
         palette: {
-            common: {
-                black: string;
-                white: string;
-            };
             primary: string;
             secondary: string;
-            button: string;
-            cardBackground: string;
+            error: string;
+            background: string;
+            dark: string;
         };
         mobile: string;
     }
