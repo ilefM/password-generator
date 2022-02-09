@@ -1,8 +1,10 @@
 <h1 align="center"> Password Generator </h1>
 
+A web app that generates random passwords with custom rules.
+
 ![](public/screenshot.png)
 
-A web app that generates random passwords with custom rules.
+The app is deployed on Github Pages on this address https://ilefm.github.io/password-generator
 
 ### Tech used :
 
