@@ -1,25 +1,21 @@
 import {DefaultTheme} from "styled-components";
 import {colors} from "./colors";
 
-export const NordTheme: DefaultTheme = {
+export const Theme: DefaultTheme = {
     text: {
         primary: {
-            fontColor: colors.darkBlue,
-            fontFamily: "Inter",
-            fontSize: "23px",
-        },
-        secondary: {
             fontColor: colors.white,
-            fontFamily: "RobotoMono",
-            fontSize: "17px",
+            fontFamily: "Inter",
+            fontSize: "18px",
         },
     },
     palette: {
-        primary: colors.darkBlue,
-        secondary: colors.okayBlue,
-        error: colors.red,
-        background: colors.white,
-        dark: colors.darkBlue,
+        primary: colors.greenLight,
+        secondary: colors.greenDark,
+        background: colors.black,
+        cardBackground: colors.blueBlack,
+        light: colors.white,
+        sliderBackground: colors.grey,
     },
-    mobile: "768px",
+    mobile: "680px",
 };

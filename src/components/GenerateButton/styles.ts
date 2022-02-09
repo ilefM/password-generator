@@ -7,18 +7,18 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     display: inline-block;
-    color: ${(props) => props.theme.palette.primary};
-    background-color: ${(props) => props.theme.palette.background};
-    font-size: 1em;
-    font-size: ${(props) => props.theme.text.primary};
+    color: ${(props) => props.theme.palette.background};
+    background-color: ${(props) => props.theme.palette.light};
+    font-size: ${(props) => props.theme.text.primary.fontSize};
+    font-family: ${(props) => props.theme.text.primary.fontFamily};
+    font-weight: 400;
     margin-top: 2em;
     padding: 0.25em 1em;
-    border: 2px solid ${(props) => props.theme.palette.dark};
+    border: 2px solid ${(props) => props.theme.palette.cardBackground};
     border-radius: 30px;
     display: block;
     cursor: pointer;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.26);
-    font-weight: 700;
     &:active {
         transform: scale(0.99);
     }

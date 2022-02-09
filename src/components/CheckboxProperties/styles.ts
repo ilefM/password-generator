@@ -10,7 +10,8 @@ export const Container = styled.div`
 export const Text = styled.p`
     display: flex;
     font-family: ${(props) => props.theme.text.primary.fontFamily};
-    font-size: ${(props) => props.theme.text.secondary.fontSize};
+    font-size: ${(props) => props.theme.text.primary.fontSize};
+    color: ${(props) => props.theme.text.primary.fontColor};
 `;
 
 export const CheckboxContainer = styled.div`
@@ -29,7 +30,7 @@ export const Checkbox = styled.input`
     margin-right: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     &:checked {
-        background: ${(props) => props.theme.palette.secondary};
+        background: ${(props) => props.theme.palette.primary};
         transition: 0.7s;
     }
     &::before {
@@ -40,7 +41,7 @@ export const Checkbox = styled.input`
         border-radius: 20px;
         top: -2px;
         left: 0;
-        background: ${(props) => props.theme.palette.dark};
+        background: ${(props) => props.theme.palette.secondary};
         transform: scale(1.1);
         transition: 0.3s;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

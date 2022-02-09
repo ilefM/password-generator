@@ -5,24 +5,25 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-    background-color: ${(props) => props.theme.palette.background};
+    background-color: ${(props) => props.theme.palette.cardBackground};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 35px;
     overflow: hidden;
-    padding: 0 0 32px;
-    margin: 48px auto 0;
+    padding: 0 0 45px;
+    margin: 80px auto 0;
     width: 600px;
     @media (max-width: ${(props) => props.theme.mobile}) {
-        width: 400px;
+        width: 350px;
     }
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
 `;
 
 export const Title = styled.p`
     font-family: ${(props) => props.theme.text.primary.fontFamily};
+    color: ${(props) => props.theme.text.primary.fontColor};
     font-size: 30px;
     text-align: center;
 `;
@@ -33,7 +34,7 @@ export const PasswordContainer = styled.div`
     width: 280px;
     height: 50px;
     align-items: center;
-    border: 2px solid ${(props) => props.theme.palette.dark};
+    border: 2px solid ${(props) => props.theme.palette.light};
 `;
 
 export const Icon = styled.div`
@@ -47,6 +48,7 @@ export const Password = styled.p`
     margin-left: 7px;
     font-size: 20px;
     height: 20px;
+    color: ${(props) => props.theme.text.primary.fontColor};
 `;
 
 export const CheckboxContainer = styled.div`

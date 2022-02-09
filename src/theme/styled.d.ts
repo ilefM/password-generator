@@ -7,18 +7,14 @@ declare module "styled-components" {
                 fontFamily: string;
                 fontSize: string;
             };
-            secondary: {
-                fontColor: string;
-                fontFamily: string;
-                fontSize: string;
-            };
         };
         palette: {
             primary: string;
             secondary: string;
-            error: string;
             background: string;
-            dark: string;
+            cardBackground: string;
+            light: string;
+            sliderBackground: string;
         };
         mobile: string;
     }

@@ -9,8 +9,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         height: 100vh;
         text-align: center;
-        //background-color: ${(props) => props.theme.palette.background};
-        background-image: url(${Background});
+        background-color: ${(props) => props.theme.palette.background};
         position: fixed;
         min-height: 100%;
         min-width: 100%;
