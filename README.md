@@ -8,7 +8,7 @@ A web app that generates random passwords with custom rules.
 
 -   React
 -   Typescript
--   Hooks
+-   UseState Hook
 -   Styled Components
 
 ### For learning purposes :
@@ -23,7 +23,7 @@ I made my own algorithm to generate the password with custom rules and length an
 -   I make sure to fill in the password with at least one of each character in a random position of the password
 -   To generate the rest of the password, I merge all the available arrays of each chosen category into one large array and randomly draw from this array to finally generate the password with the desired length
 
-The algorithm is in the `passwordGenerator.ts` file and it is self-explanatory and easy to understand
+The algorithm is in the `components/GenerateButton/passwordGenerator.ts` file and it is self-explanatory and easy to understand
 
 ### File structure :
 
@@ -42,5 +42,4 @@ I used the best practices like if I was building a big project. This is why the 
         ├── assets/
             ├── font.ttf
             ...
-        ├── passwordGenerator.ts
     ...
