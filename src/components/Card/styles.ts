@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    //background-color: ${(props) => props.theme.palette.background};
-`;
-
-export const Card = styled.div`
+export const CardContainer = styled.div`
     background-color: ${(props) => props.theme.palette.cardBackground};
     display: flex;
     flex-direction: column;
@@ -35,12 +31,6 @@ export const PasswordContainer = styled.div`
     height: 50px;
     align-items: center;
     border: 2px solid ${(props) => props.theme.palette.light};
-`;
-
-export const Icon = styled.div`
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 270px;
 `;
 
 export const Password = styled.p`

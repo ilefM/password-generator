@@ -1,6 +1,6 @@
-### STILL IN PROGRESS
-
 <h1 align="center"> Password Generator </h1>
+
+![](public/screenshot.png)
 
 A web app that generates random passwords with custom rules.
 
@@ -31,12 +31,8 @@ I used the best practices like if I was building a big project. This is why the 
 
     .
     ├── src/
-        ├── containers/
-            ├── Layout
-                ├── index.tsx
-                ├── style.ts
         ├── components/
-            ├── CheckboxProperties/
+            ├── Card/
                 ├── index.tsx
                 ├── style.ts
             ...
