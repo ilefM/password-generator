@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
     border-radius: 35px;
     overflow: hidden;
     padding: 0 0 45px;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     width: 600px;
     @media (max-width: ${(props) => props.theme.mobile}) {
         width: 350px;
