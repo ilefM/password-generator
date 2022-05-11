@@ -14,7 +14,7 @@ export const Button = styled.button`
     font-weight: 400;
     margin-top: 2em;
     padding: 0.25em 1em;
-    border: 2px solid ${(props) => props.theme.palette.background};
+    border: 2px solid ${(props) => props.theme.palette.primary};
     border-radius: 30px;
     display: block;
     cursor: pointer;
