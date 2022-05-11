@@ -34,7 +34,7 @@ export const Slider = styled.input`
         width: 20px;
         height: 20px;
         border-radius: 100%;
-        background: ${(props) => props.theme.palette.light};
+        background: ${(props) => props.theme.palette.secondary};
         cursor: pointer;
     }
 `;

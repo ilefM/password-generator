@@ -7,14 +7,14 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     display: inline-block;
-    color: ${(props) => props.theme.palette.background};
-    background-color: ${(props) => props.theme.palette.light};
+    color: ${(props) => props.theme.text.secondary.fontColor};
+    background-color: ${(props) => props.theme.palette.primary};
     font-size: ${(props) => props.theme.text.primary.fontSize};
     font-family: ${(props) => props.theme.text.primary.fontFamily};
     font-weight: 400;
     margin-top: 2em;
     padding: 0.25em 1em;
-    border: 2px solid ${(props) => props.theme.palette.cardBackground};
+    border: 2px solid ${(props) => props.theme.palette.background};
     border-radius: 30px;
     display: block;
     cursor: pointer;

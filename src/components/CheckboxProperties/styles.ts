@@ -24,7 +24,7 @@ export const Checkbox = styled.input`
     width: 50px;
     height: 20px;
     -webkit-appearance: none;
-    background: #fff;
+    background: ${(props) => props.theme.palette.switchesBackground};
     outline: none;
     border-radius: 20px;
     margin-right: 10px;

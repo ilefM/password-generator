@@ -1,21 +1,24 @@
-import {DefaultTheme} from "styled-components";
-import {colors} from "./colors";
+import { DefaultTheme } from "styled-components";
+import { colors } from "./colors";
 
 export const Theme: DefaultTheme = {
     text: {
         primary: {
-            fontColor: colors.white,
+            fontColor: colors.black,
             fontFamily: "Inter",
             fontSize: "18px",
         },
+        secondary: {
+            fontColor: colors.white,
+        },
     },
     palette: {
-        primary: colors.greenLight,
-        secondary: colors.greenDark,
+        primary: colors.blue,
+        secondary: colors.orange,
         background: colors.black,
-        cardBackground: colors.blueBlack,
-        light: colors.white,
-        sliderBackground: colors.grey,
+        cardBackground: colors.white,
+        switchesBackground: colors.whiteBlue,
+        sliderBackground: colors.lightBlue,
     },
     mobile: "680px",
 };

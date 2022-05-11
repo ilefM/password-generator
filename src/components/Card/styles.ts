@@ -31,7 +31,7 @@ export const PasswordContainer = styled.div`
     width: 280px;
     height: 50px;
     align-items: center;
-    border: 2px solid ${(props) => props.theme.palette.light};
+    border: 2px solid ${(props) => props.theme.palette.primary};
 `;
 
 export const Password = styled.p`
